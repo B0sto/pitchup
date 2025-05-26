@@ -1,26 +1,42 @@
 @import "tailwindcss";
 
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+  --color-primary-100-val: #FFE8F0;
+  --color-primary-default-val: #EE2B69;
+  --color-secondary-val: #FBE843;
+  --color-black-100-val: #333333;
+  --color-black-200-val: #141413;
+  --color-black-300-val: #7D8087;
+  --color-black-default-val: #000000;
+  --color-white-100-val: #F7F7F7;
+  --color-white-default-val: #FFFFFF;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@theme {
+  --breakpoint-xs: 475px;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+  --color-primary-100: var(--color-primary-100-val);
+  --color-primary: var(--color-primary-default-val);
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  --color-secondary: var(--color-secondary-val);
+
+  --color-black-100: var(--color-black-100-val);
+  --color-black-200: var(--color-black-200-val);
+  --color-black-300: var(--color-black-300-val);
+  --color-black: var(--color-black-default-val);
+
+  --color-white-100: var(--color-white-100-val);
+  --color-white: var(--color-white-default-val);
+
+  --font-work-sans: var(--font-work-sans);
+
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+
+  --shadow-100: 2px 2px 0px 0px rgb(0, 0, 0);
+  --shadow-200: 2px 2px 0px 2px var(--color-black);
+  --shadow-300: 2px 2px 0px 2px var(--color-primary);
 }
