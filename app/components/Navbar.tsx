@@ -11,7 +11,7 @@ const Navbar = async () => {
     <header className='px-5 py-3 bg-white shadow-sm font-work-sans'>
       <nav className='flex justify-between items-center'>
         <Link href="/">
-          <Image src="/logo.svg" alt='logo' width={144} height={30} />
+          <Image src="/logo.png" alt='logo' width={144} height={30} />
         </Link>
 
         <div className="flex items-center gap-5 text-black">
@@ -22,7 +22,7 @@ const Navbar = async () => {
               </Link>
 
               <form action={logoutWithGithub}>
-                  <button type='submit'>Logout</button>
+                  <button type='submit' className='cursor-pointer'>Logout</button>
               </form>
 
               {/* <Link href={`/user/${session?.id}`}>
@@ -31,13 +31,14 @@ const Navbar = async () => {
             </>
           ) : (
             <form action={loginWithGithub}>
-              <button type='submit'>
+              <button type='submit' className='cursor-pointer'>
                 Login
               </button>
             </form>
           )}
         </div>
       </nav>
+
     </header>
   )
 }
