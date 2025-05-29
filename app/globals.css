@@ -83,7 +83,7 @@
     background-image: repeating-linear-gradient(to right,
         transparent,
         transparent 95%,
-        rgba(231, 208, 0, 0.2) 96%, 
+        rgba(231, 208, 0, 0.2) 96%,
         rgba(251, 232, 67, 0.6) 100%);
     background-size: 40px 100%;
   }
@@ -94,6 +94,18 @@
 
   .sub-heading {
     @apply font-medium text-[20px] text-white max-w-2xl text-center break-words;
+  }
+
+  .search-form {
+    @apply max-w-3xl w-full min-h-[80px] bg-white border-[5px] border-black rounded-[80px] text-[24px] mt-8 px-5 flex flex-row items-center gap-5;
+  }
+
+  .search-input {
+    @apply flex-1 font-bold placeholder:font-semibold placeholder:text-black-100 w-full h-auto outline-none;
+  }
+
+  .search-btn {
+    @apply size-[50px] rounded-full bg-black flex justify-center items-center;
   }
 
 

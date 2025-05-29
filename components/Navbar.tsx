@@ -2,7 +2,7 @@ import { auth, signIn, signOut } from '@/auth'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import { loginWithGithub, logoutWithGithub } from '../actions/authActions'
+import { loginWithGithub, logoutWithGithub } from '../app/actions/authActions'
 
 const Navbar = async () => {
   const session = await auth();
