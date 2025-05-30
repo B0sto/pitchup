@@ -25,9 +25,9 @@ const Navbar = async () => {
                   <button type='submit' className='cursor-pointer'>Logout</button>
               </form>
 
-              {/* <Link href={`/user/${session?.id}`}>
+              <Link href={`/user/${session?.id}`}>
                 <span>{session?.user?.name}</span>
-              </Link> */}
+              </Link>
             </>
           ) : (
             <form action={loginWithGithub}>
