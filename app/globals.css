@@ -6,6 +6,7 @@
 
   --color-primary-100-val: #FFE8F0;
   --color-primary-default-val: #EE2B69;
+  --color-primary: #EE2B69;
   --color-secondary-val: #FBE843;
   --color-black-100-val: #333333;
   --color-black-200-val: #141413;
@@ -153,7 +154,7 @@
   }
 
   .startup-card {
-    @apply bg-white border-[5px] border-black py-6 px-5 rounded-[22px] shadow-200 hover:border-primary transition-all duration-500 hover:shadow-300 hover:bg-primary-100;
+    @apply bg-white border-[5px] border-black py-6 px-5 rounded-[22px] shadow-200 hover:border-[var(--color-primary-default-val)] transition-all duration-500 hover:shadow-300 hover:bg-primary-100;
   }
 
   .startup-card_btn {
