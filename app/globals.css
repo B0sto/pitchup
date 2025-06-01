@@ -6,7 +6,7 @@
 
   --color-primary-100-val: #FFE8F0;
   --color-primary-default-val: #EE2B69;
-  --color-primary: #EE2B69;
+  --primary: #EE2B69;
   --color-secondary-val: #FBE843;
   --color-black-100-val: #333333;
   --color-black-200-val: #141413;
@@ -52,7 +52,7 @@
   --breakpoint-xs: 475px;
 
   --color-primary-100: var(--color-primary-100-val);
-  --color-primary: var(--color-primary-default-val);
+  --color-primary: var(--color-primary);
 
   --color-secondary: var(--color-secondary-val);
 
@@ -178,6 +178,35 @@
     @apply w-full h-[164px] rounded-[10px] object-cover;
   }
 
+  .tag-tri {
+    @apply before:content-[''] before:absolute before:top-2 before:left-2 before:border-t-[10px] before:border-t-black before:border-r-[10px] before:border-r-transparent after:content-[''] after:absolute after:bottom-2 after:right-2 after:border-b-[10px] after:border-b-black after:border-l-[10px] after:border-l-transparent;
+  }
+
+  .tag {
+    @apply bg-[var(--color-secondary-val)] px-6 py-3 font-work-sans font-bold rounded-sm uppercase relative;
+  }
+
+  .category-tag {
+    @apply font-medium text-[16px] bg-[var(--color-primary-100-val)] px-4 py-2 rounded-full;
+  }
+
+  .divider {
+    @apply border-dotted bg-zinc-400 max-w-4xl my-10 mx-auto;
+
+  }
+
+
+  .view_skeleton {
+    @apply bg-zinc-400 h-10 w-24 rounded-lg fixed bottom-3 right-3;
+  }
+
+  .view-container {
+    @apply flex justify-end items-center mt-5 fixed bottom-3 right-3;
+  }
+
+  .view-text {
+    @apply font-medium text-[16px] bg-[var(--color-primary-100)] px-4 py-2 rounded-lg capitalize;
+  }
 
 }
 
