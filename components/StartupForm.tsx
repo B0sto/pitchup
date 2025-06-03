@@ -10,6 +10,7 @@ import { formSchema } from '@/lib/validation';
 import { ZodError } from 'zod'
 import { toast } from 'sonner';
 import { useRouter } from 'next/navigation';
+import { createPitch } from '@/lib/actions';
 
 const StartupForm = () => {
     const [errors, setErrors] = useState<Record<string, string>>({});
@@ -30,18 +31,17 @@ const StartupForm = () => {
 
             console.log(formValues);
 
-            // const result = await createIdea(prevState, formData, pitch);
+            const result = await createPitch(prevState, formData, pitch);
 
-            // console.log(result);
 
-            // if (result.status == "SUCCESS") {
-            //     toast("Success", {
-            //         description: "Your startup page has been created succesfully"
-            //     });
-            //     router.push(`/startup/${result.id}`)
-            // }
+            if (result.status == "SUCCESS") {
+                toast("Success", {
+                    description: "Your startup page has been created succesfully"
+                });
+                router.push(`/startup/${result._id}`)
+            }
 
-            // return result;
+            return result;
 
 
         } catch (error) {
@@ -139,6 +139,7 @@ const StartupForm = () => {
                     id='pitch'
                     preview='edit'
                     height={300}
+                    autoCapitalize='off'
                     style={{ borderRadius: 20, overflow: "hidden" }}
                     textareaProps={{
                         placeholder:
